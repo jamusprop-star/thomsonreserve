@@ -2303,6 +2303,7 @@ function spotlightHover(on) {
             body: JSON.stringify(getFormData(form))
         })
         .then(() => {
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
             // Reset scroll position for lightbox
             const lbBox = form.closest('.lb-box');
             if (lbBox) lbBox.scrollTop = 0;
