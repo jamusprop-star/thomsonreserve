@@ -2284,6 +2284,10 @@ function spotlightHover(on) {
             body: JSON.stringify(getFormData(form))
         })
         .then(() => {
+            // Reset scroll position for lightbox
+            const lbBox = form.closest('.lb-box');
+            if (lbBox) lbBox.scrollTop = 0;
+
             // Hide form heading (sibling elements before the form)
             const heading = form.closest('.lb-box')
                 ? form.closest('.lb-box').querySelectorAll('.lb-heading, .lb-subheading')
