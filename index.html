@@ -5,26 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomson Reserve – New Launch District 20</title>
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1754866985935089');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1754866985935089&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://script.google.com">
+    <link rel="preload" as="image" href="Photos/Hero1-compressed.jpg" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1241,9 +1226,9 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-carousel">
-        <div class="hero-slide active" style="background-image: url('Photos/Hero1-compressed.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('Photos/Hero2-compressed.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('Photos/Hero3-compressed.jpg');"></div>
+        <div class="hero-slide active" data-webp="Photos/Hero1-compressed.webp" data-jpg="Photos/Hero1-compressed.jpg"></div>
+        <div class="hero-slide" data-webp="Photos/Hero2-compressed.webp" data-jpg="Photos/Hero2-compressed.jpg"></div>
+        <div class="hero-slide" data-webp="Photos/Hero3-compressed.webp" data-jpg="Photos/Hero3-compressed.jpg"></div>
     </div>
     <div class="hero-inner">
         <div class="hero-badge">
@@ -1438,7 +1423,10 @@
                 <div class="spotlight-frame" id="sl-frame"></div>
                 <div class="spotlight-img-container">
                     <div class="spotlight-shadow" id="sl-shadow"></div>
-                    <img src="Photos/ThomsonReserveLocale-compressed.jpg" alt="Thomson Reserve Location" class="spotlight-img" id="sl-img">
+                    <picture>
+                        <source srcset="Photos/ThomsonReserveLocale-compressed.webp" type="image/webp">
+                        <img src="Photos/ThomsonReserveLocale-compressed.jpg" alt="Thomson Reserve Location" class="spotlight-img" id="sl-img" loading="lazy">
+                    </picture>
                     <div class="spotlight-overlay" id="sl-overlay"></div>
                     <!-- Corner accents -->
                     <div class="corner tl-v" id="sl-tl-v"></div>
@@ -1683,7 +1671,10 @@ function spotlightHover(on) {
 <section class="section ebrochure">
     <div class="section-inner">
         <div class="ebrochure-grid">
-            <img class="ebrochure-img" src="Photos/ThomsonReserveEbook-compressed.jpg" alt="Thomson Reserve E-Brochure">
+            <picture>
+                <source srcset="Photos/ThomsonReserveEbook-compressed.webp" type="image/webp">
+                <img class="ebrochure-img" src="Photos/ThomsonReserveEbook-compressed.jpg" alt="Thomson Reserve E-Brochure" loading="lazy">
+            </picture>
             <div class="ebrochure-content">
                 <h3>Download E-Brochure</h3>
                 <p>Get exclusive access to detailed floor plans, pricing information, and stunning visuals of Thomson Reserve. Download our comprehensive e-brochure to explore everything this prestigious development has to offer.</p>
@@ -1784,25 +1775,25 @@ function spotlightHover(on) {
         <h2 class="section-title">Floor Plans</h2>
         <div class="floor-grid">
             <div class="floor-card">
-                <img src="Photos/2-bedroom.webp" alt="2 Bedroom Floor Plan" class="floor-plan-img">
+                <img src="Photos/2-bedroom.webp" alt="2 Bedroom Floor Plan" class="floor-plan-img" loading="lazy">
                 <div class="floor-type">2 Bedroom</div>
                 <div class="floor-size">~700 sqft</div>
                 <button class="btn-primary open-lb">Request floor plan</button>
             </div>
             <div class="floor-card">
-                <img src="Photos/3-bedroom.webp" alt="3 Bedroom Floor Plan" class="floor-plan-img">
+                <img src="Photos/3-bedroom.webp" alt="3 Bedroom Floor Plan" class="floor-plan-img" loading="lazy">
                 <div class="floor-type">3 Bedroom</div>
                 <div class="floor-size">~1,000 sqft</div>
                 <button class="btn-primary open-lb">Request floor plan</button>
             </div>
             <div class="floor-card">
-                <img src="Photos/4-bedroom.webp" alt="4 Bedroom Floor Plan" class="floor-plan-img">
+                <img src="Photos/4-bedroom.webp" alt="4 Bedroom Floor Plan" class="floor-plan-img" loading="lazy">
                 <div class="floor-type">4 Bedroom</div>
                 <div class="floor-size">~1,300 sqft</div>
                 <button class="btn-primary open-lb">Request floor plan</button>
             </div>
             <div class="floor-card">
-                <img src="Photos/5-bedroom.webp" alt="5 Bedroom Floor Plan" class="floor-plan-img">
+                <img src="Photos/5-bedroom.webp" alt="5 Bedroom Floor Plan" class="floor-plan-img" loading="lazy">
                 <div class="floor-type">5 Bedroom</div>
                 <div class="floor-size">~1,600 sqft</div>
                 <button class="btn-primary open-lb">Request floor plan</button>
@@ -1858,7 +1849,10 @@ function spotlightHover(on) {
                 <div class="spotlight-frame"></div>
                 <div class="spotlight-img-container">
                     <div class="spotlight-shadow"></div>
-                    <img src="Photos/Siteplan-compressed.jpg" alt="Thomson Reserve Site Plan" class="spotlight-img">
+                    <picture>
+                        <source srcset="Photos/Siteplan-compressed.webp" type="image/webp">
+                        <img src="Photos/Siteplan-compressed.jpg" alt="Thomson Reserve Site Plan" class="spotlight-img" loading="lazy">
+                    </picture>
                     <div class="spotlight-overlay"></div>
                     <div class="corner tl-v"></div>
                     <div class="corner tl-h"></div>
@@ -2363,6 +2357,32 @@ function spotlightHover(on) {
     dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
     setInterval(() => goToSlide(currentSlide + 1), 5000);
 
+    // Detect WebP support and lazy load hero carousel images
+    function supportsWebP() {
+        const canvas = document.createElement('canvas');
+        if (canvas.getContext && canvas.getContext('2d')) {
+            return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+        }
+        return false;
+    }
+
+    const useWebP = supportsWebP();
+
+    // Load first hero image immediately
+    const firstSlide = document.querySelector('.hero-slide.active');
+    if (firstSlide) {
+        const imgUrl = useWebP ? firstSlide.dataset.webp : firstSlide.dataset.jpg;
+        firstSlide.style.backgroundImage = `url('${imgUrl}')`;
+    }
+
+    // Lazy load remaining hero carousel images after page load
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.hero-slide:not(.active)').forEach(slide => {
+            const imgUrl = useWebP ? slide.dataset.webp : slide.dataset.jpg;
+            slide.style.backgroundImage = `url('${imgUrl}')`;
+        });
+    });
+
     // Discover section scroll animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
@@ -2374,6 +2394,25 @@ function spotlightHover(on) {
     document.querySelectorAll('.discover-item').forEach(item => observer.observe(item));
 </script>
 
+<!-- Meta Pixel Code (Async) -->
+<script>
+(function() {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1754866985935089');
+    fbq('track', 'PageView');
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1754866985935089&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 </body>
 </html>
