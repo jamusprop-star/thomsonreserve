@@ -2335,7 +2335,11 @@ function spotlightHover(on) {
     // Brochure lightbox
     const lb = document.getElementById('brochure-lightbox');
     document.querySelectorAll('#open-brochure-lb, .open-lb').forEach(el =>
-        el.addEventListener('click', () => { lb.classList.add('open'); document.body.style.overflow = 'hidden'; })
+        el.addEventListener('click', () => {
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+        })
     );
     function closeLb() {
         lb.classList.remove('open');
